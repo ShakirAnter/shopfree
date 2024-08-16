@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Free - SignIn Admin Panel</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+
+      .container {
+        width: 100%;
+        height: 100vh;
+        background-color: #1d2029;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+      }
+
+      .tracker {
+        margin-top: 10px;
+        text-align: center;
+      }
+
+      main {
+        width: 90%;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .form-wrapper{
+        width: 100%;
+        max-width: 500px;
+        border: 2px solid rgb(65, 63, 63);
+        line-height: 40px;
+        margin-top: 50px;
+      }
+      form{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+      }
+      form label{
+        color: white;
+      }
+      form input{
+        height: 40px;
+        padding: 10px;
+        outline: none;
+      }
+      form button{
+        color: white;
+        margin-top: 20px;
+        padding: 10px 15px;
+        font-size: 20px;
+        cursor: pointer;
+        border: none;
+        border-radius: 8px;
+        background-color: #727977;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Shop Free - Admin Panel Sign In</h1>
+        <div class="tracker">
+          <p>Please Sign In To Access The Admin Panel</p>
+        </div>
+      </header>
+
+      <main>
+        <div class="form-wrapper">
+            <form action="/signin" method="post">
+              <label for="username">UserName:</label>
+              <input
+                type="text"
+                id="username"
+                placeholder="Type In Your Username"
+              />
+    
+              <label for="password">Password:</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Type In Your Password"
+              />
+    
+              <button type="submit">Sign In</button>
+            </form>
+        </div>
+      </main>
+    </div>
+
+    <script src="./js/admin.js"></script>
+  </body>
+</html>

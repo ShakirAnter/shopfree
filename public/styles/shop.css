@@ -1,0 +1,12 @@
+
+.news-letter{
+    margin-top: 20%;
+}
+
+/* Animations Class Lists */
+.justify{
+    margin-top: 0;
+}
+.brighten{
+    filter: brightness(100%);
+}

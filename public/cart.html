@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Free - Shopping Cart</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/cart.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./fontawesome/css/brands.min.css">
+    <link rel="stylesheet" href="./fontawesome/css/regular.min.css">
+    <link rel="stylesheet" href="./fontawesome/css/solid.min.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/" class="logo"><img src="/fontawesome/svgs/brands/amazon.svg" alt="Logo"></a>
+
+            <form action="#" class="search-form">
+                <input type="text" placeholder="Search Our Store" id="search-box">
+                <button title="button" type="submit" id="search-btn"><i class="fa-solid fa-search"></i></button>
+            </form>
+
+            <div>
+                <ul class="links">
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="/products">Shop</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li>
+                        <a href="/cart" class="cart-icon">
+                            <i class="fa-solid fa-shopping-bag"></i>
+                            <span class="cart-total-label">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="cart">
+            <div class="header">
+                <button><i class="fa-solid fa-arrow-left-long"></i> <a href="/products">Continue Shopping</a></button>
+                
+                <h3>Total: <span>$40</span></h3>
+
+                <button><a href="/checkout">CheckOut</a> <i class="fa-solid fa-arrow-right-long"></i></button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Product Name</th>
+                        <th>Rating</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="./images/Apple airpods.webp" alt=""></td>
+                        <td>Apple Airpods Pro Max</td>
+                        <td>67</td>
+                        <td>
+                            <button class="quantity-btn">-</button>
+                            <span class="quantity">1</span>
+                            <button class="quantity-btn">+</button>
+                        </td>
+                        <td>$38</td>
+                        <td>$38</td>
+                        <td><button class="remove-btn">Remove</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </div>
+    <script src="./js/cart.js"></script>
+    <script>
+        // JavaScript to handle active link and underline
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll(".links li a");
+
+            // Function to set the active link based on the current URL
+            function setActiveLink() {
+                const currentLocation = window.location.pathname;
+
+                links.forEach(link => {
+                    const linkHref = link.getAttribute("href");
+                    
+                    if (currentLocation === linkHref) {
+                        link.classList.add("active");
+                    } else {
+                        link.classList.remove("active");
+                    }
+                });
+            }
+
+            // Set the active link when the page loads
+            setActiveLink();
+
+            // Update the active link when a link is clicked
+            links.forEach(link => {
+                link.addEventListener("click", function() {
+                    links.forEach(l => l.classList.remove("active"));
+                    this.classList.add("active");
+                });
+            });
+        });
+
+
+    </script>
+</body>
+</html>

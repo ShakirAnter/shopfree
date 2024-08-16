@@ -1,0 +1,47 @@
+.about{
+    padding: 20px 20px;
+}
+.about p{
+    color: black;
+}
+.services{
+    width: 100%;
+    height: auto;
+    padding: 10px 10px;
+}
+.info-section{
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.info-card{
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;    
+    text-align: center;
+    padding: 20px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    background: lightgray;
+    transition: .3s ease-in-out;
+}
+.info-card h3{
+    font-size: 25px;
+}
+.info-card:hover{
+    transform: translateY(-10px);
+}
+
+.news-letter{
+    margin-top: 20%;
+}
+
+/* Animations Class Lists */
+.justify{
+    margin-top: 0;
+}
+.brighten{
+    filter: brightness(100%);
+}

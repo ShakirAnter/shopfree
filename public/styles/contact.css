@@ -1,0 +1,77 @@
+.contact-section{
+    padding: 20px 20px;
+}
+.contact-form{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    padding: 0 10px;
+    gap: 10px;
+}
+.form{
+    width: 55%;
+    text-align: center;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid gray;
+    border-radius: 20px;
+    background-color: lightgray;
+}
+#contact-form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.form-control{
+    margin: 10px;
+    padding: 10px;
+}
+.form-control label{
+    float: left;
+    margin-bottom: 5px;
+}
+.form-control input{
+    width: 100%;
+    height: 30px;
+    padding: 0 10px;
+    outline: none;
+}
+.text-area{
+    grid-column: span 2;
+    text-align: center;
+    width: 100%;
+}
+textarea{
+    width: 100%;
+    padding: 10px 10px;
+}
+.full-width{
+    grid-column: span 2;
+}
+.form-control button{
+    width: 100%;
+    background-color: blue;
+    transition: .3s;
+}
+.form-control button:hover{
+    background-color: rgb(22, 116, 209);
+}
+.contact-side-bar{
+    width: 40%;
+    height: 75vh;
+    padding: 30px 10px;
+    border-left: 2px solid gray;
+}
+.contact-side-bar li{
+    margin: 20px; 
+    font-size: 20px;
+}
+.social-links{
+    text-align: center;
+}
+iframe{
+    margin-left: 50%;
+}
